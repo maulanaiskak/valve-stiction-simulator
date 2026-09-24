@@ -1,13 +1,13 @@
 """Regression test for the simulator's stiction toggle: locks in that it
 produces a signal the real classic detector actually distinguishes, not
-just "some noise that looks different." See main.py's module docstring
-for why the parameters here (period/amplitude/stick_band) aren't
-arbitrary -- changing them without rechecking this test risks silently
-breaking the pipeline's ground truth.
+just "some noise that looks different." See simulator.py's module
+docstring for why the parameters here (period/amplitude/stick_band)
+aren't arbitrary -- changing them without rechecking this test risks
+silently breaking the pipeline's ground truth.
 """
 
 import numpy as np
-from main import Simulator
+from domain.simulator import Simulator
 from valve_stiction_ml.classic import ellipse_stiction_index, kano_pattern_check
 
 

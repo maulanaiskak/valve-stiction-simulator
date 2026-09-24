@@ -10,5 +10,7 @@ WORKDIR /app
 RUN pip install --no-cache-dir paho-mqtt numpy
 
 COPY main.py .
+COPY domain/ domain/
+COPY delivery/ delivery/
 
 CMD ["python", "main.py"]
